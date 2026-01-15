@@ -90,3 +90,75 @@ img {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+
+nav {
+    background-color: #333;
+    overflow: hidden; /* Giúp thanh menu ôm trọn nội dung */
+}
+
+/* Style cho các link thường */
+nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* --- PHẦN MỚI THÊM ĐỂ LÀM DROPDOWN --- */
+
+/* 1. Tạo khối bao quanh nút Trường LTT để nó nằm cùng hàng với các nút kia */
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+/* 2. Style cho nút 'Trường LTT' giống hệt các nút khác */
+.dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+/* 3. Hiệu ứng hover cho cả link thường và nút dropdown */
+nav a:hover, .dropdown:hover .dropbtn {
+    background-color: #ddd;
+    color: black;
+}
+
+/* 4. Nội dung menu con (Mặc định là ẩn - display: none) */
+.dropdown-content {
+    display: none;
+    position: absolute; /* Giúp nó nổi lên trên, không đẩy nội dung bên dưới chạy */
+    background-color: #f9f9f9;
+    min-width: 160px; /* Chiều rộng tối thiểu của menu con */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Đổ bóng cho đẹp */
+    z-index: 1; /* Đảm bảo menu nằm đè lên trên ảnh và chữ bên dưới */
+}
+
+/* 5. Style cho các link bên trong menu con */
+.dropdown-content a {
+    float: none; /* Quan trọng: Link con phải xuống dòng, không float left nữa */
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* 6. Màu nền khi di chuột vào link con */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* 7. QUAN TRỌNG NHẤT: Khi di chuột vào khối .dropdown thì hiện menu con */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
