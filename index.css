@@ -162,3 +162,52 @@ nav a:hover, .dropdown:hover .dropbtn {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+/* --- PHẦN RESPONSIVE (Dán vào cuối file CSS) --- */
+
+@media screen and (max-width: 600px) {
+    /* 1. Chuyển menu từ ngang sang dọc */
+    nav a, .dropdown .dropbtn {
+        float: none;       /* Bỏ trôi nổi */
+        display: block;    /* Xếp chồng lên nhau */
+        text-align: left;  /* Canh trái cho dễ đọc trên điện thoại */
+        width: 100%;       /* Chiếm hết chiều rộng */
+    }
+
+    /* Đảm bảo nút dropdown cũng full chiều rộng */
+    .dropdown {
+        float: none;
+        width: 100%;
+    }
+
+    /* 2. Xử lý Menu con (Dropdown) trên điện thoại */
+    .dropdown-content {
+        position: relative; /* Không bay lơ lửng nữa, mà nằm trong dòng chảy văn bản */
+        box-shadow: none;   /* Bỏ bóng đổ cho gọn */
+        background-color: #e9e9e9; /* Màu nền tối hơn chút để phân biệt */
+        padding-left: 20px; /* Thụt đầu dòng để biết là mục con */
+    }
+    
+    .dropdown-content a {
+        padding: 10px; /* Giảm padding một chút cho gọn */
+    }
+
+    /* 3. Chỉnh lại container nội dung chính */
+    .container {
+        margin: 10px;    /* Giảm lề bên ngoài */
+        width: auto;     /* Tự động theo chiều rộng màn hình */
+        padding: 15px;   /* Giảm lề bên trong */
+    }
+
+    /* 4. Xử lý Footer (Chân trang) */
+    /* Trên điện thoại, footer cố định (fixed) sẽ che mất nội dung, nên ta bỏ cố định đi */
+    footer {
+        position: static; 
+        margin-top: 20px;
+    }
+    
+    /* 5. Chỉnh tiêu đề nhỏ lại chút cho vừa màn hình */
+    header h1 {
+        font-size: 24px;
+    }
+}
