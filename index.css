@@ -94,10 +94,9 @@ img {
 
 nav {
     background-color: #333;
-    overflow: hidden; /* Giúp thanh menu ôm trọn nội dung */
+    overflow: hidden; 
 }
 
-/* Style cho các link thường */
 nav a {
     float: left;
     display: block;
@@ -107,15 +106,11 @@ nav a {
     text-decoration: none;
 }
 
-/* --- PHẦN MỚI THÊM ĐỂ LÀM DROPDOWN --- */
-
-/* 1. Tạo khối bao quanh nút Trường LTT để nó nằm cùng hàng với các nút kia */
 .dropdown {
     float: left;
     overflow: hidden;
 }
 
-/* 2. Style cho nút 'Trường LTT' giống hệt các nút khác */
 .dropdown .dropbtn {
     font-size: 16px;  
     border: none;
@@ -127,25 +122,24 @@ nav a {
     margin: 0;
 }
 
-/* 3. Hiệu ứng hover cho cả link thường và nút dropdown */
+
 nav a:hover, .dropdown:hover .dropbtn {
     background-color: #ddd;
     color: black;
 }
 
-/* 4. Nội dung menu con (Mặc định là ẩn - display: none) */
 .dropdown-content {
     display: none;
-    position: absolute; /* Giúp nó nổi lên trên, không đẩy nội dung bên dưới chạy */
+    position: absolute; 
     background-color: #f9f9f9;
-    min-width: 160px; /* Chiều rộng tối thiểu của menu con */
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Đổ bóng cho đẹp */
-    z-index: 1; /* Đảm bảo menu nằm đè lên trên ảnh và chữ bên dưới */
+    min-width: 160px; 
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
+    z-index: 1; 
 }
 
-/* 5. Style cho các link bên trong menu con */
+
 .dropdown-content a {
-    float: none; /* Quan trọng: Link con phải xuống dòng, không float left nữa */
+    float: none;
     color: black;
     padding: 12px 16px;
     text-decoration: none;
@@ -153,54 +147,53 @@ nav a:hover, .dropdown:hover .dropbtn {
     text-align: left;
 }
 
-/* 6. Màu nền khi di chuột vào link con */
+
 .dropdown-content a:hover {
     background-color: #ddd;
 }
 
-/* 7. QUAN TRỌNG NHẤT: Khi di chuột vào khối .dropdown thì hiện menu con */
+
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* --- PHẦN RESPONSIVE (Dán vào cuối file CSS) --- */
+
 
 @media screen and (max-width: 600px) {
-    /* 1. Chuyển menu từ ngang sang dọc */
+    
     nav a, .dropdown .dropbtn {
-        float: none;       /* Bỏ trôi nổi */
-        display: block;    /* Xếp chồng lên nhau */
-        text-align: left;  /* Canh trái cho dễ đọc trên điện thoại */
-        width: 100%;       /* Chiếm hết chiều rộng */
+        float: none;       
+        display: block;    
+        text-align: left; 
+        width: 100%;       
     }
 
-    /* Đảm bảo nút dropdown cũng full chiều rộng */
+    
     .dropdown {
         float: none;
         width: 100%;
     }
 
-    /* 2. Xử lý Menu con (Dropdown) trên điện thoại */
+   
     .dropdown-content {
-        position: relative; /* Không bay lơ lửng nữa, mà nằm trong dòng chảy văn bản */
-        box-shadow: none;   /* Bỏ bóng đổ cho gọn */
-        background-color: #e9e9e9; /* Màu nền tối hơn chút để phân biệt */
-        padding-left: 20px; /* Thụt đầu dòng để biết là mục con */
+        position: relative; 
+        box-shadow: none;  
+        background-color: #e9e9e9; 
+        padding-left: 20px; 
     }
     
     .dropdown-content a {
-        padding: 10px; /* Giảm padding một chút cho gọn */
+        padding: 10px; 
     }
 
-    /* 3. Chỉnh lại container nội dung chính */
+   
     .container {
-        margin: 10px;    /* Giảm lề bên ngoài */
-        width: auto;     /* Tự động theo chiều rộng màn hình */
-        padding: 15px;   /* Giảm lề bên trong */
+        margin: 10px;    
+        width: auto;     
+        padding: 15px;   
     }
 
-    /* 4. Xử lý Footer (Chân trang) */
-    /* Trên điện thoại, footer cố định (fixed) sẽ che mất nội dung, nên ta bỏ cố định đi */
+    
     footer {
         position: static; 
         margin-top: 20px;
@@ -389,27 +382,7 @@ nav a:hover {
   background-color: #007bbd;
 }
 
-/* DROPDOWN */
-.dropdown {
-  position: relative;
-}
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #004d73;
-  min-width: 160px;
-  top: 100%;
-  z-index: 1000;
-}
-
-.dropdown-content a {
-  padding: 12px 16px;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
 
 /* CONTAINER */
 .container {
@@ -540,3 +513,6 @@ footer {
     font-size: 2rem;
   }
 }
+
+
+  
